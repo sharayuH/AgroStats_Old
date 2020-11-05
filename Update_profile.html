@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AgroStats_UpdateProfile</title>
+    <style>
+body {
+  background-image: url('background_image.jpeg'); background-size:100% 100%;
+}
+    </style>
+</head>
+<body  >
+
+<img src="pictlogo.png" alt="PICT Logo" width="142" height="142" style="margin-left:10%;margin-top:5%;margin-bottom:-5%;">
+<!Name of the software>
+<h1 style="text-align:center;font-family:verdana;">
+    <b><textarea style="width:20cm;height:3cm;text-align:center;font-size:200%;font-family:Algerian;font-color:rgb(0,255,0);margin-top:-20%;margin-left:5.5%;background-color:rgb(160,145,255);">AGROSTATS</textarea></b></h1>
+<nav class="NavBar" style="margin-left:25.5%;margin-top:-1.6%;text-align:right;margin-right:40%;width:20cm;height:1cm;">  <a href="index.html" class="button NavBar-item" style="margin-right:5%;text-color:dark blue;">Home</a>
+  <a href="index.html" class="button Nav-item" style="margin-right:5%;text-color:dark blue;">Log-Out</a>
+  <a href="contact.html" class="button NavBar-item" style="margin-right:5%;text-color:dark blue;">Contact</a>
+</nav>
+<img src="agrostatslogo.png" alt="WEB Logo" width="142" height="142" style="margin-left:85%;margin-top:-12.5%;margin-bottom:5%;">
+
+<form action="info1.html" style="width:27cm;height:29cm;margin-left:17%;margin-right:5%;margin-top:-2%;background-color:rgb(215,225,200);border:1mm inset rgb(200,100,150);font-size:22px;font-family:'Aladin';font-color:dark-blue;text-align:left;">
+    <label for="firstname" style="margin-left:2%;font-color:blue;"> First name: </label><br>
+    <input type="text" id="firstname" name="firstname" style="width:25cm;height:1cm;border:0.8mm solid rgb(0,0,0);margin-top:2%;margin-bottom:3%;margin-left:2%;text-align:center;font-size:h3;text-color:grey;"><br>
+    <label for="email" style="margin-left:2%;font-color:blue;"> Email-Id: </label><br>
+    <input type="email" id="email" name="email" style="width:25cm;height:1cm;border:0.8mm solid black;margin-left:2%;margin-top:2%;margin-bottom:3%;text-align:justify;font-size:h3;text-color:grey;"><br>
+    <label for="Mobile Number" style="margin-left:2%;font-color:blue;"> Mobile No.: </label><br>
+    <input type="text" id="Mobile Number" name="Mobile Number" size="10" required style="width:25cm;height:1cm;border:0.8mm solid black;margin-left:2%;margin-top:2%;margin-bottom:3%;text-align:center;font-size:h3;text-color:grey;"><br>
+    <label for="birthday" style="margin-left:2%;font-color:blue;"> Date of Birth: </label><br>
+    <input type="date" id="birthday" name="birthday" min="01" max="31" required style="width:5cm;height:1.3cm;background-color:grey;margin-left:3%;margin-bottom:2%;"><br>
+    <label for="region" style="margin-left:2%;font-color:blue;"> Your Landmark: </label><br>
+    <input type="text" id="region" name="region" style="width:25cm;height:1cm;border:0.8mm solid black;margin-left:2%;margin-top:2%;margin-bottom:3%;text-align:center;font-size:h3;text-color:grey;"><br>
+
+    <label for="Crops" style="margin-left: 2%">Crops taken in last year</label>
+    <select id="Crops" name="Crops" required style="width:5cm;height:1cm;border-color:rgb(100,90,100);border:2mm;margin-top:2%;margin-bottom:3%;text-align:justify;font-size:h3;text-color:grey;">
+        <option value="-Select-"> -Select- </option>
+        <option value="soyabean"> Soyabean </option>
+        <option value="Wheat"> Wheat </option>
+        <option value="Bajra"> Bajra </option>
+        <option value="Rice"> Rice </option>
+        <option value="Groundnut"> Groundnut </option>
+        <option value="Blackgram"> Blackgram </option>
+        <option value="Maize"> Sugarcane </option>
+    </select><br>
+    <label for="Crops" style="margin-left: 2%">Crops taken in 2018-19</label>
+    <select id="Crops" name="Crops" required style="width:5cm;height:1cm;border-color:rgb(100,90,100);border:2mm;margin-top:2%;margin-bottom:3%;text-align:justify;font-size:h3;text-color:grey;">
+        <option value="-Select-"> -Select- </option>
+        <option value="soyabean"> Soyabean </option>
+        <option value="Wheat"> Wheat </option>
+        <option value="Bajra"> Bajra </option>
+        <option value="Rice"> Rice </option>
+        <option value="Groundnut"> Groundnut </option>
+        <option value="Blackgram"> Blackgram </option>
+        <option value="Maize"> Sugarcane </option>
+    </select><br>
+    <label for="Crop" style="margin-left: 1%">Crops taken in last 5 years</label><br>
+    <input type="radio" id="Crop" name="Previous crops" value="Soyabean" style="margin-left: 2%">
+    <label for="Crop" style="margin-left: 1%">Soyabean</label><br>
+    <input type="radio" id="Crop" name="Previous crops" value="Wheat" style="margin-left: 2%">
+    <label for="Crop" style="margin-left: 1%">Wheat</label><br>
+    <input type="radio" id="Crop" name="Previous crops" value="Rice" style="margin-left: 2%">
+    <label for="Crop" style="margin-left: 1%">Rice</label><br>
+    <input type="radio" id="Crop" name="Previous crops" value="Groundnut" style="margin-left: 2%">
+    <label for="Crop" style="margin-left: 1%">Groundnut</label><br>
+    <input type="radio" id="Crop" name="Previous crops" value="Blackgram" style="margin-left: 2%">
+    <label for="Crop" style="margin-left: 1%">Blackgram</label><br>
+    <input type="radio" id="Crop" name="Previous crops" value="Sugarcane" style="margin-left: 2%">
+    <label for="Crop" style="margin-left: 1%">Sugarcane</label><br>
+    <input type="radio" id="Crop" name="Previous crops" value="Bajra" style="margin-left: 2%">
+    <label for="Crop" style="margin-left: 1%">Bajra</label><br>
+    <input type="submit" value="Update Profile" style="width:3cm;height:1cm;text-align:center;background-color:green;margin-left:44%;margin-top:5%;margin-bottom:5%;">
+</form>
+
+</body>
+</html>

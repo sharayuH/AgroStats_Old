@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nashik Crops</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+    <style>
+body {
+  background-image: url('background_image.jpeg'); background-size:100% 100%;
+}
+    </style>
+</head>
+<body>
+
+<img src="pictlogo.png" alt="PICT Logo" width="142" height="142" style="margin-left:10%;margin-top:5%;margin-bottom:-5%;">
+<!Name of the software>
+<h1 style="text-align:center;font-family:verdana;">
+    <b><textarea style="width:20cm;height:3cm;text-align:center;font-size:200%;font-family:Algerian;font-color:rgb(0,255,0);margin-top:-20%;margin-left:5.5%;background-color:rgb(160,145,255);">AGROSTATS</textarea></b></h1>
+<nav class="NavBar" style="margin-left:25.5%;margin-top:-1.6%;text-align:right;margin-right:40%;width:20cm;height:1cm;">  <a href="index.html" class="button NavBar-item" style="margin-right:5%;text-color:dark blue;">Home</a>
+  <a href="update_profile.html" class="button NavBar-item" style="margin-right:5%;text-color:dark blue;">Update Profile</a>
+  <a href="index.html" class="button Nav-item" style="margin-right:5%;text-color:dark blue;">Log-Out</a>
+  <a href="contact.html" class="button NavBar-item" style="margin-right:5%;text-color:dark blue;">Contact</a>
+</nav>
+<img src="agrostatslogo.png" alt="WEB Logo" width="142" height="142" style="margin-left:85%;margin-top:-12.5%;margin-bottom:5%;">
+
+<!How to apply>
+<p style="width:7.5cm;height:9cm;background-color:rgb(215,225,200);margin-left:14%;margin-right:60%;margin-top:0.5%;text-align:center;font-size:120%;border:1.01mm solid blue;">
+    <textarea style="width:7.3cm;height:1.5cm;text-align:center;margin-bottom:5%;font-size:200%;border:0.5mm groove white;">HOW TO APPLY?</textarea>
+    1.Click on the REGISTER HERE link<br>
+    2.Enter your data as per the requirement<br>
+    3.Sign-up and create your own account.<br>
+    4.Sign-in and apply for the scheme you want<br>
+    5.Apply and check your results<br>
+
+
+    <p id="nash"></p>
+     <script>
+        var data2;
+        $.ajax({
+            type: "GET",
+            url: "nashik.csv",       // put name of your csv file
+            dataType: "text",
+            success: function (response) {
+                data2 = $.csv.toArrays(response);
+                console.log(data2)
+            }
+        });
+    </script>
+
+
+
+
+</p>
+<!Information Box>
+<p style="width:8.5cm;height:9.5cm;background-color:rgb(100,200,255);border:0.5mm double green;margin-left:40%;margin-right:40%;margin-top:-25%;text-align:left;font-size:100%;">
+    <textarea style="width:7.85cm;height:1.5cm;text-align:left;margin-top:1%;margin-left:1.5%;margin-bottom:5%;font-size:300%;font-color:rgb(255,255,255);">Information</textarea>
+    
+
+    <label for="Season" style="text-align:center;"> Season </label><br>
+    <select id="season" name="Season" required style="width:5cm;height:1cm;border-color:rgb(100,90,100);border:2mm;margin-top:2%;margin-bottom:3%;margin-left:3%;text-align:justify;font-size:h3;text-color:grey;">
+        <option value="-Select-"> -Select- </option>
+        <option value="1">Summer</option>
+        <option value="2">Monsoon</option>
+    </select><br>
+
+    <label for="Temperature"> Temperature (in °C) </label><br>
+    <select id="temp" name="Temperature" required style="width:5cm;height:1cm;border-color:rgb(100,90,100);border:2mm;margin-top:2%;margin-bottom:3%;margin-left:3%;text-align:justify;font-size:h3;text-color:grey;">
+        <option value="-Select-"> -Select- </option>
+        <option value="1"> 0-15 </option>
+        <option value="2"> 16-30 </option>
+        <option value="3"> 31-50 </option>
+    </select><br>
+
+    <label for="Rainfall" style="text-align:center;"> Rainfall (in mm) </label><br>
+    <select id="rainfall" name="Rainfall" required style="width:5cm;height:1cm;border-color:rgb(100,90,100);border:2mm;margin-top:2%;margin-bottom:3%;margin-left:3%;text-align:justify;font-size:h3;text-color:grey;">
+        <option value="-Select-"> -Select- </option>
+        <option value="1"> 0-600 </option>
+        <option value="2"> 601-1200 </option>
+        <option value="3"> 1201-1600 </option>
+    </select><br>
+
+    <!--<label for="soil"> Soil Type </label><br>
+    <select id="soil" name="soil type" required style="width:5cm;height:1cm;border-color:rgb(100,90,100);border:2mm;margin-top:2%;margin-bottom:3%;margin-left:3%;text-align:justify;font-size:h3;text-color:grey;">
+        <option value="-Select-"> -Select- </option>
+        <option value="Black Soil"> Black Soil </option>
+        <option value="Red Soil"> Red Soil </option>
+        <option value="Shallow Soil"> Shallow Soil </option>
+    </select>
+-->
+    <input type="submit" value="Submit" onclick="myFunction()" style="width:2cm;height:1cm;text-align:center;background-color:green;margin-left:0%;margin-top:5%;margin-bottom:5%;">
+    </p>
+
+
+    <script>
+        function myFunction() {
+            var sea = document.getElementById("season").value; //it will return value of selected option
+            var temp = document.getElementById("temp").value; //it will return value of selected option
+            var rainfall = document.getElementById("rainfall").value; //it will return value of selected option
+            console.log(sea, temp, rainfall)
+            for (var i = 0; i < 18; i++) {
+                if (data2[i][0] === sea && data2[i][1] === temp && data2[i][2] === rainfall) {
+                    crop = data2[i][3]
+                    document.getElementById("nash").innerHTML = crop;
+                    document.getElementById("nash").style.textAlign = "center";
+                    document.getElementById("nash").style.color = "red";
+                    document.getElementById("nash").style.fontFamily = "Arial";
+                    document.getElementById("nash").style.fontSize = "larger";
+                    document.getElementById("nash").style.animationDuration = "3s";
+
+                    //document.getElementById("documentIframe").style.textAlign = "center";
+                    //document.getElementById("documentIframe").style.margin = "0px auto";
+                    return
+
+                }
+                else {
+                    crop = "Not Available" //elif
+                }
+
+            }
+            document.getElementById("nash").innerHTML = crop;
+         }
+    </script>
+
+
+
+
+<!Terms and Conditions>
+<p style="width:9cm;height:9.5cm;background-color:rgb(215,225,200);margin-left:66%;margin-top:-24%;text-align:center;font-size:22px;font-family:'Aladin';border:1.01mm solid blue;">
+    <textarea style="width:8.9cm;height:2.3cm;margin-bottom:5%;background-color:rgb(255,255,255);text-align:center;font-size:150%;border:0.5mm groove white;">Terms and Conditions </textarea>
+    1.Registration is allowed only if you are a farmer or a seed-supplier.<br>
+    2.Every year you must update your profile.<br>
+    3.Each individual can access only one account.<br>
+    4.No fake accounts are allowed.<br>
+    5.You must follow the result pattern.<br>
+</p>
+<p style="height:2cm;">
+
+</p>
+
+
+</body>
+</html>
